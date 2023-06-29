@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #fde0dc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      color: black;
+    }
+
+    .text-box {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      box-shadow: 0 0 5px pink;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: pink;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .submit-button:hover {
+      background-color: #ff80ab;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your name:</h1>
+    <input type="text" class="text-box" id="nameInput" placeholder="Enter your name" required>
+    <br>
+    <button class="submit-button" onclick="submitName()">Submit</button>
+  </div>
+  <script>
+    function submitName() {
+      var name = document.getElementById("nameInput").value;
+      window.location.href = "fourth.html?name=" + encodeURIComponent(name);
+    }
+  </script>
+</body>
+</html>
